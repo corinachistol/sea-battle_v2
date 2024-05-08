@@ -6,10 +6,12 @@
 
     $users = load_users();
 
-//    $found = user_exists($users, $username, $password);
+    $found = user_exists($users);
+    $found = array_values($found);
 
-    if(user_exists($users)){
-        print("Welcome");
+
+    if(!empty($found)){
+        print("Welcome {$found[0]['username']} ");
     }else{
         header("Location: /match.php");
     };

@@ -95,11 +95,10 @@
                 // }
                 
          // HW1: rewrite this algorith array.filter()  & git commit variants
-        $found = array_filter($users, function ($user) {
+        return array_filter($users, function ($user) {
             return  $user['username'] == $_POST['username'] && $user['password'] == $_POST['password'];
         });
-        // var_dump($found);
-        return $found;
+
     }
 
 
