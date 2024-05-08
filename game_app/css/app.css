@@ -1,59 +1,89 @@
-body {
+body{
     background-color: #223;
+    color: white;
+    font-family: sans-serif;
+}
+
+.navbar a {
     color: white;
 }
 
-.map {
+.map{
     width: 500px;
     height: 500px;
     border: 3px solid #444;
-    border-top: 0;
+    border-top:0;
     margin-left: 1rem;
-
+   
 }
 
-.hcoords {
+.hcoords{
     width: 500px;
     display: flex;
     justify-content: space-around;
     margin-left: 1rem;
     margin-bottom: -15px;
 
-}
+} 
 
-.vcoords {
+.vcoords{
     width: 500px;
     display: flex;
     justify-content: space-around;
     transform: rotate(90deg) translateX(260px) translateY(250px);
-}
-
-.vcoords span {
+} 
+.vcoords span{
     transform: rotate(-90deg);
 }
 
-.map .sq {
+.map .sq{
     width: 48px;
     height: 48px;
     border: 1px solid #666;
     background-color: transparent;
-
+  
     float: left;
     outline: none;
 }
 
-.map .ship {
+.map .ship{
     background-color: #651;
 }
 
-.map .hit {
+.map .hit{
     background-image: url(../i/hit.png);
     background-repeat: no-repeat;
     background-position: center;
 }
-
-.map .miss {
+.map .miss{
     background-image: url(../i/miss.png);
     background-repeat: no-repeat;
     background-position: center;
+}
+
+
+.match-table{
+    border: 1px solid #666;
+    width: 1100px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.match-table td{
+    border: 1px dotted #444;
+    padding: 5px;
+}
+
+.match-table form input {
+    display: block;
+    margin: auto;
+}
+
+.match-table form input,
+.match-table form button{
+    padding: 10px;
+}
+
+.match-table form a{
+    color: white;
 }
