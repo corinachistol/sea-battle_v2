@@ -1,0 +1,13 @@
+
+
+version: '3.4'
+
+services:
+  sea_battle-app-container: 
+    image: php:8.3-apache
+    restart: always
+    volumes:
+      - ./game_app/:/var/www/html
+
+    ports:
+      - 8081:80
