@@ -85,18 +85,21 @@
         return json_decode( file_get_contents("./data/users.json"), true );
     }
 
-    function user_exists($users, $username, $password){
-        $found = false;
-        // HW1: rewrite this algorith array.filter()  & git commit variants
-        for ($i = 0; $i < count($users); $i++) {
-            if ($users[$i]['username'] == $username && $users[$i]['password'] == $password) {
-                $found = true;
-                break;
-            }
-        }
-
+    function user_exists($users) {
+        // $found = false;
+        // for ($i = 0; $i < count($users); $i++) {
+            //     if ($users[$i]['username'] == $username && $users[$i]['password'] == $password) {
+                //         $found = true;
+                //         break;
+                //     }
+                // }
+                
+         // HW1: rewrite this algorith array.filter()  & git commit variants
+        $found = array_filter($users, function ($user) {
+            return  $user['username'] == $_POST['username'] && $user['password'] == $_POST['password'];
+        });
+        // var_dump($found);
         return $found;
     }
 
 
- 
