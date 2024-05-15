@@ -74,16 +74,22 @@ body{
     padding: 5px;
 }
 
-.match-table form input {
+ form input,
+ form button {
     display: block;
     margin: auto;
 }
 
-.match-table form input,
-.match-table form button{
+ form input,
+ form button{
     padding: 10px;
 }
 
-.match-table form a{
+ form a{
     color: white;
+}
+
+.error{
+    color: red;
+    text-align: center;
 }

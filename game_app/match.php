@@ -36,7 +36,7 @@
             <form action="/login-action.php" method="POST">
                 <input name="username" type="text" placeholder="username" >
                 <input name="password" type="password" placeholder="password">
-                <p>no acount ? <a href="">create one</a></p>
+                <p>no acount ? <a href="/create-account.php">create one</a></p>
                 <button>ENTER</button>
             </form>
         </td>
@@ -44,7 +44,7 @@
             <form action="/login-action.php" method="POST">
                 <input name="username" type="text" placeholder="username" >
                 <input name="password" type="password" placeholder="password">
-                <p>no acount ? <a href="">create one</a></p>
+                <p>no acount ? <a href="/create-account.php">create one</a></p>
                 <button>ENTER</button>
             </form>
         </td>

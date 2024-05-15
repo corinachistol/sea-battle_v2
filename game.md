@@ -212,3 +212,55 @@ lib.php
 
 
 # HW1: register the shot ---> map state
+
+
+
+
+
+
+
++-------- GET req /create-account.php ------+
+                                            |
+<----------- res HTML ----------------------+
+|
+form (POST)
+|
++---- username
++---- password
++---- password_confirm
+
++-------POST rew / register-action.php ------+
+                                             |
+                                             v
+                                         1. obtain form data
+                                             |                                 ^
+                                        2. check password confirmation         |
+                                             |                              redirect
+                                             v                                 |
+                                    $password != $password_confirm ? - true ---+
+                                             |
+                                             v
+                                         false
+                                             |   
+
+
+
+
+
+
+
+
+
+
+
+
+        FORM                        ACTION
+      s-----------e               s------------e
+      |           |               |            |     
+x-----x===========x---------------x======x======>------------------------------------>
+           ^                             |
+           |                             |
+           |                             redirect
+           |                             |
+           +------------?message=..------+
+           url params / query string
